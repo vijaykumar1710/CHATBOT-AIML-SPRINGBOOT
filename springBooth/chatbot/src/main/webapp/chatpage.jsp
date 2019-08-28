@@ -14,7 +14,12 @@
 	<b> ${username} </b> : <i> ${received}</i> <br/>
 	<b>bot</b> : <i>${respond}</i><br/>
 		<input type="hidden" name="username" value="${username}" />
-		<input name="message" type="text" /><br /> 
+		<input name="message" type="text" id="my-input" autofocus="autofocus" /><br />
+		<script>
+			if (!("autofocus" in document.createElement("input"))) {
+				document.getElementById("my-input").focus();
+			}
+		</script> 
 		<input type="submit" value="SEND" />
 	</form>
 </body>
