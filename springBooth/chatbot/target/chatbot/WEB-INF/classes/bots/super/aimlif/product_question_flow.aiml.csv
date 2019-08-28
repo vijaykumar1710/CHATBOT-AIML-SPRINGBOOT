@@ -1,0 +1,14 @@
+0,PHILIPS *,*,*,I can help you in suggesting appropriate patient monitoring device as per your preferences. What type of care do you provide?#Newline		 1. Hospital tier 1#Newline         2. Hospital tier 2#Newline         3. Nursing Home  #Newline          #Newline          Please type...,product_question_flow.aiml
+0,HOSPITAL TIER 1,*,*,We have High Acuity#Comma Mid Acuity#Comma Low Acuity for your hospital. Choose Which Acuity You would wish.,product_question_flow.aiml
+0,HOSPITAL TIER 2,*,*,We have Mid Acuity#Comma Low Acuity for your hospital. Choose Which Acuity You would wish.,product_question_flow.aiml
+0,NURSING HOME,*,*,We have Mid Acuity#Comma Low Acuity for your hospital. Choose Which Acuity You would wish.,product_question_flow.aiml
+0,HIGH ACUITY,*,*,Please Choose the Screen type -#Newline		Touch Screen#Newline		Non Touch Screen,product_question_flow.aiml
+0,LOW ACUITY,*,*,Please Choose the Screen type -#Newline		Touch Screen#Newline		Non Touch Screen,product_question_flow.aiml
+0,MID ACUITY,*,*,Please Choose the Screen type -#Newline		Touch Screen#Newline		Non Touch Screen,product_question_flow.aiml
+0,TOUCH SCREEN,*,*,Choose the Screen Size Available \n #Newline		10 inch \n#Newline		12 inch \n#Newline		15 inch,product_question_flow.aiml
+0,NON TOUCH SCREEN,*,*,Choose the Screen Size Available \n #Newline		10 inch \n#Newline		12 inch \n#Newline		15 inch,product_question_flow.aiml
+0,10 INCH,*,*,Please Choose the add ons available. #Newline	SpO2'#Comma 'Masimo SET'#Comma 'Dual IBP'#Comma 'etCO2 Oridion'#Comma 'etCO2 Respironics'#Comma '12-lead ECG'#Comma 'Cardiac output',product_question_flow.aiml
+0,12 INCH,*,*,Please Choose the add ons available. #Newline	SpO2'#Comma 'Masimo SET'#Comma 'Dual IBP'#Comma 'etCO2 Oridion'#Comma 'etCO2 Respironics'#Comma '12-lead ECG'#Comma 'Cardiac output',product_question_flow.aiml
+0,15 INCH,*,*,Please Choose the add ons available. #Newline	SpO2'#Comma 'Masimo SET'#Comma 'Dual IBP'#Comma 'etCO2 Oridion'#Comma 'etCO2 Respironics'#Comma '12-lead ECG'#Comma 'Cardiac output',product_question_flow.aiml
+0,ADDONS *,*,*,Thanks for answering All Questions. Type 'OK SHOW THE PRODUCT" If u want to see the appropriate Product.,product_question_flow.aiml
+0,OK SHOW THE PRODUCT,*,*,Please wait processing..........,product_question_flow.aiml

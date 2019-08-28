@@ -1,0 +1,107 @@
+[{
+		"name": "efficia_CM10",
+		"acuity": "mid acuity",
+		"screen_type": "non touch screen",
+		"screen_size": "10 inch",
+		"basic_features": ["3- and 5-lead ECG", "Philips ST analysis", "Impedance respiration", "Philips NBP", "Dual continuous temp"],
+		"add_ons": ["SpO2", "Masimo SET", "Dual IBP"]
+	},
+	{
+		"name": "efficia_CM12",
+		"acuity": "mid acuity",
+		"screen_type": "non touch screen",
+		"screen_size": "12 inch",
+		"basic_features": ["3- and 5-lead ECG", "Philips ST analysis", "Impedance respiration", "Philips NBP", "Dual continuous temp"],
+		"add_ons": ["SpO2", "Masimo SET", "Dual IBP"]
+	},
+	{
+		"name": "efficia_CM100",
+		"acuity": "mid acuity",
+		"screen_type": "touch screen",
+		"screen_size": "10 inch",
+		"basic_features": ["3- and 5-lead ECG", "Philips ST analysis", "Impedance respiration", "Philips NBP", "Dual continuous temp"],
+		"add_ons": ["SpO2", "Masimo SET", "Dual IBP"]
+	},
+	{
+		"name": "efficia_CM120",
+		"acuity": "mid acuity",
+		"screen_type": "touch screen",
+		"screen_size": "12 inch",
+		"basic_features": ["3- and 5-lead ECG", "Philips ST analysis", "Impedance respiration", "Philips NBP", "Dual continuous temp"],
+		"add_ons": ["SpO2", "Masimo SET", "Dual IBP"]
+	},
+	{
+		"name": "efficia_CM150",
+		"acuity": "mid acuity",
+		"screen_type": "touch screen",
+		"screen_size": "15 inch",
+		"basic_features": ["3- and 5-lead ECG", "Philips ST analysis", "Impedance respiration", "Philips NBP", "Dual continuous temp"],
+		"add_ons": ["SpO2", "Masimo SET", "Dual IBP"]
+	},
+	{
+		"name": "Goldway_G30E",
+		"acuity": "low acuity",
+		"screen_type": "non touch screen",
+		"screen_size": "10 inch",
+		"basic_features": ["3- and 5-lead ECG", "Philips ST analysis", "Impedance respiration", "Philips NBP", "Dual continuous temp"],
+		"add_ons": null
+	},
+	{
+		"name": "Goldway_G40E",
+		"acuity": "low acuity",
+		"screen_type": "non touch screen",
+		"screen_size": "12 inch",
+		"basic_features": ["3- and 5-lead ECG", "Philips ST analysis", "Impedance respiration", "Philips NBP", "Dual continuous temp"],
+		"add_ons": null
+	},
+	{
+		"name": "IntelliVue_MX400",
+		"acuity": "high acuity",
+		"screen_type": "touch screen",
+		"screen_size": "10 inch",
+		"basic_features": ["3- and 5-lead ECG", "Philips ST analysis", "Impedance respiration", "Philips NBP", "Dual continuous temp"],
+		"add_ons": ["SpO2", "Masimo SET", "Dual IBP", "etCO2 Oridion"]
+	},
+	{
+		"name": "IntelliVue_MX450",
+		"acuity": "high acuity",
+		"screen_type": "touch screen",
+		"screen_size": "12 inch",
+		"basic_features": ["3- and 5-lead ECG", "Philips ST analysis", "Impedance respiration", "Philips NBP", "Dual continuous temp"],
+		"add_ons": ["SpO2", "Masimo SET", "Dual IBP", "etCO2 Oridion"]
+	},
+	{
+		"name": "IntelliVue_MX500",
+		"acuity": "high acuity",
+		"screen_type": "touch screen",
+		"screen_size": "12 inch",
+		"basic_features": ["3- and 5-lead ECG", "Philips ST analysis", "Impedance respiration", "Philips NBP", "Dual continuous temp"],
+		"add_ons": ["SpO2", "Masimo SET", "Dual IBP", "etCO2 Oridion", "etCO2 Respironics", "12-lead ECG"]
+	},
+	{
+		"name": "IntelliVue_MX550",
+		"acuity": "high acuity",
+		"screen_type": "touch screen",
+		"screen_size": "15 inch",
+		"basic_features": ["3- and 5-lead ECG", "Philips ST analysis", "Impedance respiration", "Philips NBP", "Dual continuous temp"],
+		"add_ons": ["SpO2", "Masimo SET", "Dual IBP"]
+	},
+	{
+		"name": "IntelliVue_MX700",
+		"acuity": "high acuity",
+		"screen_type": "touch screen",
+		"screen_size": "15 inch",
+		"basic_features": ["3- and 5-lead ECG", "Philips ST analysis", "Impedance respiration", "Philips NBP", "Dual continuous temp"],
+		"add_ons": ["SpO2", "Masimo SET", "Dual IBP", "etCO2 Oridion", "etCO2 Respironics", "12-lead ECG"]
+	},
+	{
+		"name": "IntelliVue_MX800",
+		"acuity": "high acuity",
+		"screen_type": "touch screen",
+		"screen_size": "15 inch",
+		"basic_features": ["3- and 5-lead ECG", "Philips ST analysis", "Impedance respiration", "Philips NBP", "Dual continuous temp"],
+		"add_ons": ["SpO2", "Masimo SET", "Dual IBP", "etCO2 Oridion", "etCO2 Respironics", "12-lead ECG", "Cardiac output"]
+	}
+
+
+]

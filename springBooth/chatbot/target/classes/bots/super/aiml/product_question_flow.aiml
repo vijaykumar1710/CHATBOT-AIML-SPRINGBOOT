@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<category><pattern>PHILIPS *</pattern>
+<template>I can help you in suggesting appropriate patient monitoring device as per your preferences. What type of care do you provide?
+		 1. Hospital tier 1
+         2. Hospital tier 2
+         3. Nursing Home  
+          
+          Please type...</template>
+</category>
+<category><pattern>HOSPITAL TIER 1</pattern>
+<template>We have High Acuity, Mid Acuity, Low Acuity for your hospital. Choose Which Acuity You would wish.</template>
+</category>
+<category><pattern>HOSPITAL TIER 2</pattern>
+<template>We have Mid Acuity, Low Acuity for your hospital. Choose Which Acuity You would wish.</template>
+</category>
+<category><pattern>HOSPITAL TIER 3</pattern>
+<template>We have Mid Acuity, Low Acuity for your hospital. Choose Which Acuity You would wish.</template>
+</category>
+<category><pattern>HIGH ACUITY</pattern>
+<template>Please Choose the Screen type -
+		Touch Screen
+		Non Touch Screen</template>
+</category>
+<category><pattern>LOW ACUITY</pattern>
+<template>Please Choose the Screen type -
+		Touch Screen
+		Non Touch Screen</template>
+</category>
+<category><pattern>MID ACUITY</pattern>
+<template>Please Choose the Screen type -
+		Touch Screen
+		Non Touch Screen</template>
+</category>
+<category><pattern>TOUCH SCREEN</pattern>
+<template>Choose the Screen Size Available \n 
+		10 inch \n
+		12 inch \n
+		15 inch</template>
+</category>
+<category><pattern>NON TOUCH SCREEN</pattern>
+<template>Choose the Screen Size Available \n 
+		10 inch \n
+		12 inch \n
+		15 inch</template>
+</category>
+<category><pattern>10 INCH</pattern>
+<template>Please Choose the add ons available. 
+	SpO2', 'Masimo SET', 'Dual IBP', 'etCO2 Oridion', 'etCO2 Respironics', '12-lead ECG', 'Cardiac output'</template>
+</category>
+<category><pattern>12 INCH</pattern>
+<template>Please Choose the add ons available. 
+	SpO2', 'Masimo SET', 'Dual IBP', 'etCO2 Oridion', 'etCO2 Respironics', '12-lead ECG', 'Cardiac output'</template>
+</category>
+<category><pattern>15 INCH</pattern>
+<template>Please Choose the add ons available. 
+	SpO2', 'Masimo SET', 'Dual IBP', 'etCO2 Oridion', 'etCO2 Respironics', '12-lead ECG', 'Cardiac output'</template>
+</category>
+<category><pattern>ADDONS *</pattern>
+<template>Thanks for answering All Questions. Type 'OK SHOW THE PRODUCT" If u want to see the appropriate Product.</template>
+</category>
+<category><pattern>OK SHOW THE PRODUCT</pattern>
+<template>Please wait processing..........</template>
+</category>
+</aiml>
