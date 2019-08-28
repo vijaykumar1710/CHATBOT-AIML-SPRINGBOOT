@@ -12,7 +12,11 @@
 	<form action="user" >
 		USERNAME      : <input name="username" type="text" /><br /> 
 		CONTACT       : <input name="contact" type="number" /><br /> 
-		HOSPIAL TYPE  : <input name="hospital" type="text" /><br />
+		HOSPIAL TYPE  : <select name="hospital">
+			<option value="Hospital Tier 1">Hospital Tier 1</option>
+			<option value="Hospital Tier 2">Hospital Tier 2</option>
+			<option value="Nursing Home">Nursing Home</option>
+		</select> <br><br>
 		<input type="submit" value="ENTER CHATBOT" />
 	</form>
 </body>
