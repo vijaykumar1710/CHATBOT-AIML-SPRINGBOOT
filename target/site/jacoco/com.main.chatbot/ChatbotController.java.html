@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ChatbotController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chatbot Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">com.main.chatbot</a> &gt; <span class="el_source">ChatbotController.java</span></div><h1>ChatbotController.java</h1><pre class="source lang-java linenums">/*
+ * The copyright of this file belongs to Koninklijke Philips N.V., 2019.
+ */
+package com.main.chatbot;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.json.simple.parser.ParseException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import com.main.device.DeviceController;
+import com.main.product.ProductPreferences;
+import com.main.product.ProductSuggestion;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
+@Api(value = &quot;CHATBOT&quot;)
+@Controller
+<span class="nc" id="L25">public class ChatbotController {</span>
+
+  @Autowired
+  DeviceController deviceUtility;
+
+  @Autowired
+  ProductPreferences productPreferences;
+
+<span class="nc" id="L33">  private static Logger logger =  Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);</span>
+
+  @ApiOperation(value = &quot;Returns PROPER REPLY OR NEXT PAGE&quot;)
+  @GetMapping(value = &quot;/chat&quot;)
+  public String getBotReply(@RequestParam(&quot;message&quot;) String clientmsg, @RequestParam(&quot;username&quot;) String username, Model model) throws SQLException{
+
+<span class="nc bnc" id="L39" title="All 4 branches missed.">    if(clientmsg.contains(&quot;end&quot;) || clientmsg.contains(&quot;bye&quot;)) {</span>
+<span class="nc" id="L40">      System.exit(0);</span>
+<span class="nc bnc" id="L41" title="All 2 branches missed.">    }else if(clientmsg.contains(&quot;ok show the product&quot;)) {</span>
+      try {
+
+<span class="nc" id="L44">        model.addAttribute(&quot;devices&quot;,ProductSuggestion.compareProduct(productPreferences.getPreferences(username)));</span>
+<span class="nc" id="L45">        model.addAttribute(&quot;username&quot;,username);</span>
+
+<span class="nc" id="L47">      } catch (final FileNotFoundException e) {</span>
+<span class="nc" id="L48">        logger.log(Level.INFO,&quot;FileNotFoundException&quot;,e);</span>
+<span class="nc" id="L49">      } catch (final IOException e) {</span>
+<span class="nc" id="L50">        logger.log(Level.INFO,&quot;IOException&quot;,e);</span>
+<span class="nc" id="L51">      } catch (final ParseException e) {</span>
+<span class="nc" id="L52">        logger.log(Level.INFO,&quot;ParseException&quot;,e);</span>
+<span class="nc" id="L53">      }</span>
+<span class="nc" id="L54">      return &quot;result&quot;;</span>
+    }
+    else {
+
+<span class="nc" id="L58">      deviceUtility.util(clientmsg, username);</span>
+<span class="nc" id="L59">      model.addAttribute(&quot;respond&quot;,ChatBot.getBotReply(clientmsg));</span>
+<span class="nc" id="L60">      model.addAttribute(&quot;received&quot;,clientmsg);</span>
+<span class="nc" id="L61">      model.addAttribute(&quot;username&quot;,username);</span>
+    }
+
+<span class="nc" id="L64">    return &quot;chatpage&quot;;</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

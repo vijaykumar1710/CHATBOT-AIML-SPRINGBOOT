@@ -1,0 +1,30 @@
+0,PHILIPS,*,*,I can help you in suggesting appropriate patient monitoring device as per your preferences. What type of care do you provide? <br/> Hospital tier 1<br/> Hospital tier 2<br/> Nursing Home <br/>Please type...,product_question_flow.aiml
+0,PHILIPS *,*,*,<srai>PHILIPS</srai>,product_question_flow.aiml
+0,_ PHILIPS *,*,*,<srai>PHILIPS</srai>,product_question_flow.aiml
+0,* PHILIPS,*,*,<srai>PHILIPS</srai>,product_question_flow.aiml
+0,* PHILIPS PMS *,*,*,<srai>PHILIPS</srai>,product_question_flow.aiml
+0,_ PHILIPS PMS,*,*,<srai>PHILIPS</srai>,product_question_flow.aiml
+0,_ PMS,*,*,<srai>PHILIPS</srai>,product_question_flow.aiml
+0,PMS,*,*,<srai>PHILIPS</srai>,product_question_flow.aiml
+0,_ PMS *,*,*,<srai>PHILIPS</srai>,product_question_flow.aiml
+0,PMS _,*,*,<srai>PHILIPS</srai>,product_question_flow.aiml
+0,_ PATIENT MONITORING SYSTEM,*,*,<srai>PHILIPS</srai>,product_question_flow.aiml
+0,PATIENT MONITORING SYSTEM,*,*,<srai>PHILIPS</srai>,product_question_flow.aiml
+0,_ PATIENT MONITORING SYSTEM *,*,*,<srai>PHILIPS</srai>,product_question_flow.aiml
+0,PATIENT MONITORING SYSTEM _,*,*,<srai>PHILIPS</srai>,product_question_flow.aiml
+0,PHILIPS PATIENT MONITORING SYSTEM _,*,*,<srai>PHILIPS</srai>,product_question_flow.aiml
+0,HOSPITAL TIER 1,*,*,We have High Acuity#Comma Mid Acuity#Comma Low Acuity for your hospital. Choose Which Acuity You would wish.,product_question_flow.aiml
+0,TIER 1,*,*,<srai>HOSPITAL TIER 1</srai>,product_question_flow.aiml
+0,HOSPITAL TIER 2,*,*,We have Mid Acuity#Comma Low Acuity for your hospital. Choose Which Acuity You would wish.,product_question_flow.aiml
+0,TIER 2,*,*,<srai>HOSPITAL TIER 2</srai>,product_question_flow.aiml
+0,NURSING HOME,*,*,We have Mid Acuity#Comma Low Acuity for your hospital. Choose Which Acuity You would wish.,product_question_flow.aiml
+0,HIGH ACUITY,*,*,Please Choose the Screen type -#Newline		<br/>Touch Screen#Newline		<br/>Non Touch Screen,product_question_flow.aiml
+0,LOW ACUITY,*,*,Please Choose the Screen type -#Newline		<br/>Touch Screen#Newline		<br/>Non Touch Screen,product_question_flow.aiml
+0,MID ACUITY,*,*,Please Choose the Screen type -#Newline		<br/>Touch Screen#Newline		<br/>Non Touch Screen,product_question_flow.aiml
+0,TOUCH SCREEN,*,*,Choose the Screen Size Available<br/> 10 inch <br/>12 inch<br/> 15 inch,product_question_flow.aiml
+0,NON TOUCH SCREEN,*,*,Choose the Screen Size Available<br/> 10 inch <br/>12 inch<br/> 15 inch,product_question_flow.aiml
+0,10 INCH,*,*,Type "addons" and then type the add ons you require from available list.<br/>#Newline	SpO2<br/>Masimo SET<br/>Dual IBP<br/>etCO2 Oridion<br/>etCO2 Respironics<br/>12-lead ECG<br/>Cardiac output,product_question_flow.aiml
+0,12 INCH,*,*,Type "addons" and then type the add ons you require from available list.<br/>#Newline	SpO2<br/>Masimo SET<br/>Dual IBP<br/>etCO2 Oridion<br/>etCO2 Respironics<br/>12-lead ECG<br/>Cardiac output,product_question_flow.aiml
+0,15 INCH,*,*,Type "addons" and then type the add ons you require from available list.<br/>#Newline	SpO2<br/>Masimo SET<br/>Dual IBP<br/>etCO2 Oridion<br/>etCO2 Respironics<br/>12-lead ECG<br/>Cardiac output,product_question_flow.aiml
+0,ADDONS *,*,*,Thanks for answering All Questions. Type 'OK SHOW THE PRODUCT" If u want to see the appropriate Product.,product_question_flow.aiml
+0,OK SHOW THE PRODUCT,*,*,Please wait processing..........,product_question_flow.aiml

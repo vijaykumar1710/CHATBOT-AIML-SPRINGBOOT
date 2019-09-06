@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Device.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chatbot Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">com.main.device</a> &gt; <span class="el_source">Device.java</span></div><h1>Device.java</h1><pre class="source lang-java linenums">/*
+ * The copyright of this file belongs to Koninklijke Philips N.V., 2019.
+ */
+package com.main.device;
+
+public class Device {
+  String productName;
+  String acuity;
+  String screenType;
+  String screenSize;
+  String addons;
+  String basicfeatures;
+  double percentage;
+
+
+
+  @Override
+  public String toString() {
+<span class="fc" id="L19">    return &quot;Device [productName=&quot; + productName + &quot;, acuity=&quot; + acuity + &quot;, screenType=&quot;</span>
+        + screenType + &quot;, screenSize=&quot; + screenSize + &quot;, addons=&quot; + addons + &quot;, basicfeatures=&quot;
+        + basicfeatures + &quot;, percentage=&quot; + percentage + &quot;]&quot;;
+  }
+
+  public Device( String productName, String acuity, String screenType,
+      String screenSize, String addons, String basicfeatures, double percentage) {
+<span class="fc" id="L26">    super();</span>
+<span class="fc" id="L27">    this.productName = productName;</span>
+<span class="fc" id="L28">    this.acuity = acuity;</span>
+<span class="fc" id="L29">    this.screenType = screenType;</span>
+<span class="fc" id="L30">    this.screenSize = screenSize;</span>
+<span class="fc" id="L31">    this.addons = addons;</span>
+<span class="fc" id="L32">    this.basicfeatures = basicfeatures;</span>
+<span class="fc" id="L33">    this.percentage = percentage;</span>
+<span class="fc" id="L34">  }</span>
+
+  public String getProductName() {
+<span class="nc" id="L37">    return productName;</span>
+  }
+
+  public void setProductName(String productName) {
+<span class="fc" id="L41">    this.productName = productName;</span>
+<span class="fc" id="L42">  }</span>
+
+
+
+<span class="fc" id="L46">  public Device() {</span>
+
+<span class="fc" id="L48">  }</span>
+
+  public double getPercentage() {
+<span class="nc" id="L51">    return percentage;</span>
+  }
+  public void setPercentage(double percentage) {
+<span class="fc" id="L54">    this.percentage = percentage;</span>
+<span class="fc" id="L55">  }</span>
+  public String getBasicfeatures() {
+<span class="nc" id="L57">    return basicfeatures;</span>
+  }
+  public void setBasicfeatures(String basicfeatures) {
+<span class="fc" id="L60">    this.basicfeatures = basicfeatures;</span>
+<span class="fc" id="L61">  }</span>
+
+  public String getAcuity() {
+<span class="nc" id="L64">    return acuity;</span>
+  }
+  public void setAcuity(String acuity) {
+<span class="fc" id="L67">    this.acuity = acuity;</span>
+<span class="fc" id="L68">  }</span>
+  public String getScreenType() {
+<span class="nc" id="L70">    return screenType;</span>
+  }
+  public void setScreenType(String screenType) {
+<span class="fc" id="L73">    this.screenType = screenType;</span>
+<span class="fc" id="L74">  }</span>
+  public String getScreenSize() {
+<span class="nc" id="L76">    return screenSize;</span>
+  }
+  public void setScreenSize(String screenSize) {
+<span class="fc" id="L79">    this.screenSize = screenSize;</span>
+<span class="fc" id="L80">  }</span>
+  public String getAddons() {
+<span class="nc" id="L82">    return addons;</span>
+  }
+  public void setAddons(String addons) {
+<span class="fc" id="L85">    this.addons = addons;</span>
+<span class="fc" id="L86">  }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CustomerController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chatbot Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">com.main.customer</a> &gt; <span class="el_source">CustomerController.java</span></div><h1>CustomerController.java</h1><pre class="source lang-java linenums">/*
+ * The copyright of this file belongs to Koninklijke Philips N.V., 2019.
+ */
+package com.main.customer;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
+
+@Api(value = &quot;USER DETAILS&quot;)
+@Controller
+<span class="nc" id="L17">public class CustomerController {</span>
+
+  @Autowired
+  CustomerUtil customerUtil;
+
+  @ApiOperation(value = &quot;Returns NEXT PAGE&quot;)
+  @GetMapping(value = &quot;/user&quot;)
+  public String enterChat(@RequestParam(&quot;username&quot;) String username, @RequestParam(&quot;contact&quot;) String contact,@RequestParam(&quot;hospital&quot;) String hospitaltype, Model model) {
+<span class="nc" id="L25">    customerUtil.addToDB(username, contact, hospitaltype);</span>
+<span class="nc" id="L26">    model.addAttribute(&quot;username&quot;,username);</span>
+<span class="nc" id="L27">    return &quot;chatpage&quot;;</span>
+  }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

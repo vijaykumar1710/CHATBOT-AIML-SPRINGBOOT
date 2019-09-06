@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>StringSimilarity.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chatbot Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">com.main.util</a> &gt; <span class="el_source">StringSimilarity.java</span></div><h1>StringSimilarity.java</h1><pre class="source lang-java linenums">/*
+ * The copyright of this file belongs to Koninklijke Philips N.V., 2019.
+ */
+package com.main.util;
+
+import org.apache.commons.text.similarity.LevenshteinDistance;
+
+public class StringSimilarity {
+
+  /**
+   * Calculates the similarity (a number within 0 and 1) between two strings.
+   */
+  public static double similarity(String s1, String s2) {
+<span class="fc" id="L14">    String longer = s1;</span>
+<span class="fc" id="L15">    String shorter = s2;</span>
+<span class="fc bfc" id="L16" title="All 2 branches covered.">    if (s1.length() &lt; s2.length()) { // longer should always have greater length</span>
+<span class="fc" id="L17">      longer = s2; shorter = s1;</span>
+    }
+<span class="fc" id="L19">    final int longerLength = longer.length();</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">    if (longerLength == 0) {</span>
+<span class="fc" id="L21">      return 1.0;  // both strings are zero length</span>
+    }
+<span class="fc" id="L23">    final LevenshteinDistance levenshteinDistance = new LevenshteinDistance();</span>
+<span class="fc" id="L24">    return (longerLength - levenshteinDistance.apply(longer, shorter)) / (double) longerLength;</span>
+
+  }
+
+  private StringSimilarity() {}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

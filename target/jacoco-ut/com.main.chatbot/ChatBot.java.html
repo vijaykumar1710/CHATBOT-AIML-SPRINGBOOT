@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ChatBot.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chatbot Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">com.main.chatbot</a> &gt; <span class="el_source">ChatBot.java</span></div><h1>ChatBot.java</h1><pre class="source lang-java linenums">/*
+ * The copyright of this file belongs to Koninklijke Philips N.V., 2019.
+ */
+package com.main.chatbot;
+
+import org.alicebot.ab.Bot;
+import org.alicebot.ab.Chat;
+import com.main.util.ResourcePath;
+
+public class ChatBot {
+
+<span class="fc" id="L12">  static String botName = &quot;super&quot;;</span>
+
+  public static String getBotReply(String clientmsg) {
+
+<span class="fc" id="L16">    final String resourcesPath = ResourcePath.getResourcesPath();</span>
+<span class="fc" id="L17">    final Bot bot = new Bot(&quot;super&quot;, resourcesPath);</span>
+<span class="fc" id="L18">    final Chat chatSession = new Chat(bot);</span>
+<span class="fc" id="L19">    bot.brain.nodeStats();</span>
+<span class="fc" id="L20">    final String textLine = clientmsg;</span>
+
+<span class="fc bfc" id="L22" title="All 2 branches covered.">    if (textLine.isEmpty()) {</span>
+<span class="fc" id="L23">      return null;</span>
+    } else {
+<span class="fc" id="L25">      final String request = clientmsg;</span>
+<span class="fc" id="L26">      return chatSession.multisentenceRespond(request);</span>
+
+    }
+  }
+
+  private ChatBot() {}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

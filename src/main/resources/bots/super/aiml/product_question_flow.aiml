@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<category><pattern>PHILIPS</pattern>
+<template>I can help you in suggesting appropriate patient monitoring device as per your preferences. What type of care do you provide? <br/> Hospital tier 1<br/> Hospital tier 2<br/> Nursing Home <br/>Please type...</template>
+</category>
+<category><pattern>PHILIPS *</pattern>
+<template><srai>PHILIPS</srai></template>
+</category>
+<category><pattern>_ PHILIPS *</pattern>
+<template><srai>PHILIPS</srai></template>
+</category>
+<category><pattern>* PHILIPS</pattern>
+<template><srai>PHILIPS</srai></template>
+</category>
+<category><pattern>* PHILIPS PMS *</pattern>
+<template><srai>PHILIPS</srai></template>
+</category>
+<category><pattern>_ PHILIPS PMS</pattern>
+<template><srai>PHILIPS</srai></template>
+</category>
+<category><pattern>_ PMS</pattern>
+<template><srai>PHILIPS</srai></template>
+</category>
+<category><pattern>PMS</pattern>
+<template><srai>PHILIPS</srai></template>
+</category>
+<category><pattern>_ PMS *</pattern>
+<template><srai>PHILIPS</srai></template>
+</category>
+<category><pattern>PMS _</pattern>
+<template><srai>PHILIPS</srai></template>
+</category>
+<category><pattern>_ PATIENT MONITORING SYSTEM</pattern>
+<template><srai>PHILIPS</srai></template>
+</category>
+<category><pattern>PATIENT MONITORING SYSTEM</pattern>
+<template><srai>PHILIPS</srai></template>
+</category>
+<category><pattern>_ PATIENT MONITORING SYSTEM *</pattern>
+<template><srai>PHILIPS</srai></template>
+</category>
+<category><pattern>PATIENT MONITORING SYSTEM _</pattern>
+<template><srai>PHILIPS</srai></template>
+</category>
+<category><pattern>PHILIPS PATIENT MONITORING SYSTEM _</pattern>
+<template><srai>PHILIPS</srai></template>
+</category>
+<category><pattern>HOSPITAL TIER 1</pattern>
+<template>We have High Acuity, Mid Acuity, Low Acuity for your hospital. Choose Which Acuity You would wish.</template>
+</category>
+<category><pattern>TIER 1</pattern>
+<template><srai>HOSPITAL TIER 1</srai></template>
+</category>
+<category><pattern>HOSPITAL TIER 2</pattern>
+<template>We have Mid Acuity, Low Acuity for your hospital. Choose Which Acuity You would wish.</template>
+</category>
+<category><pattern>TIER 2</pattern>
+<template><srai>HOSPITAL TIER 2</srai></template>
+</category>
+<category><pattern>NURSING HOME</pattern>
+<template>We have Mid Acuity, Low Acuity for your hospital. Choose Which Acuity You would wish.</template>
+</category>
+<category><pattern>HIGH ACUITY</pattern>
+<template>Please Choose the Screen type -
+		<br/>Touch Screen
+		<br/>Non Touch Screen</template>
+</category>
+<category><pattern>LOW ACUITY</pattern>
+<template>Please Choose the Screen type -
+		<br/>Touch Screen
+		<br/>Non Touch Screen</template>
+</category>
+<category><pattern>MID ACUITY</pattern>
+<template>Please Choose the Screen type -
+		<br/>Touch Screen
+		<br/>Non Touch Screen</template>
+</category>
+<category><pattern>TOUCH SCREEN</pattern>
+<template>Choose the Screen Size Available<br/> 10 inch <br/>12 inch<br/> 15 inch</template>
+</category>
+<category><pattern>NON TOUCH SCREEN</pattern>
+<template>Choose the Screen Size Available<br/> 10 inch <br/>12 inch<br/> 15 inch</template>
+</category>
+<category><pattern>10 INCH</pattern>
+<template>Type "addons" and then type the add ons you require from available list.<br/>
+	SpO2<br/>Masimo SET<br/>Dual IBP<br/>etCO2 Oridion<br/>etCO2 Respironics<br/>12-lead ECG<br/>Cardiac output</template>
+</category>
+<category><pattern>12 INCH</pattern>
+<template>Type "addons" and then type the add ons you require from available list.<br/>
+	SpO2<br/>Masimo SET<br/>Dual IBP<br/>etCO2 Oridion<br/>etCO2 Respironics<br/>12-lead ECG<br/>Cardiac output</template>
+</category>
+<category><pattern>15 INCH</pattern>
+<template>Type "addons" and then type the add ons you require from available list.<br/>
+	SpO2<br/>Masimo SET<br/>Dual IBP<br/>etCO2 Oridion<br/>etCO2 Respironics<br/>12-lead ECG<br/>Cardiac output</template>
+</category>
+<category><pattern>ADDONS *</pattern>
+<template>Thanks for answering All Questions. Type 'OK SHOW THE PRODUCT" If u want to see the appropriate Product.</template>
+</category>
+<category><pattern>OK SHOW THE PRODUCT</pattern>
+<template>Please wait processing..........</template>
+</category>
+</aiml>

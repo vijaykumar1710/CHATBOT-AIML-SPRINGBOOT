@@ -1,0 +1,9 @@
+com\main\device\DeviceMapperTest.class
+com\main\util\ConvertToJSONTest.class
+com\main\product\ProductSuggestionTest.class
+com\main\util\ResourcePathTest.class
+com\main\util\StringSimilirityTest.class
+com\main\automation\WebAuto.class
+com\main\chatbot\ChatBotControllerTest.class
+com\main\chatbot\ChatBotTest.class
+com\main\util\UtilityTest.class
