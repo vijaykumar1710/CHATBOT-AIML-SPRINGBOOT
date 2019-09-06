@@ -32,7 +32,7 @@ In the project first we collect the user data and then user enters the ChatBot. 
 
 * Code Coverage : 75% ( JUNIT test cases are run to prove)
 * Size of a function : limited by SonarLint
-* Cyclomatic Complexity : 4 (in one function max=5 unavoidable)
+* Cyclomatic Complexity : 4
 * Duplication : 0 (Threshold = 3)
 
 ## Ease of update or modifications :
