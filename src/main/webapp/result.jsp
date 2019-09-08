@@ -37,7 +37,10 @@
 				
 	 </table>
 	 
-	<h2>If you would like to be contacted by the sales person, please SUBMIT with your comments...</h2>
+	<h2>If you would like to be contacted by our sales representative,
+		SUBMIT with your comments.You can mention your email Id, interested
+		product, Quantity required, etc. which could help our sale
+		representative while contacting you.</h2>
 	
 	<form action="result" >
 	<input type="hidden" name="username" value="${username}" />
