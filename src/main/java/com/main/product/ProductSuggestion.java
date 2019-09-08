@@ -16,11 +16,11 @@ public class ProductSuggestion {
 
   private static final String PRODUCTS = "src/main/resources/products.json";
 
-  public static List<Device> compareProduct(JSONObject jsonObject1) throws IOException, ParseException{
+  public static List<Device> compareProduct(JSONObject clientPref) throws IOException, ParseException{
     final JSONParser parser = new JSONParser();
     final Object obj = parser.parse(new FileReader(PRODUCTS));
     final JSONArray jsonArray = (JSONArray) obj;
-    return ProductUtil.addToList(jsonArray, jsonObject1);
+    return ProductUtil.addToList(jsonArray, clientPref);
   }
 
   private ProductSuggestion() {}
