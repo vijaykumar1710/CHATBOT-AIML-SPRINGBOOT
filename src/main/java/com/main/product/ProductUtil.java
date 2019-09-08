@@ -14,44 +14,49 @@ import com.main.util.Utility;
 
 public class ProductUtil {
 
-  final static List<Device> exact_devices = new ArrayList<>();
-  final static List<Device> similar_devices = new ArrayList<>();
 
-  public static boolean hasExactMatch(JSONObject jsonObject, JSONObject jsonObject1) {
 
-    final String acuity = (String) jsonObject1.get("acuity");
-    final String screenType = (String) jsonObject1.get("screen_type");
-    final String screenSize = (String) jsonObject1.get("screen_size");
+  private ProductUtil() {}
+
+  public static boolean hasExactMatch(JSONObject jsonObject, JSONObject clientPref) {
+
+    final String acuity = (String) clientPref.get("acuity");
+    final String screenType = (String) clientPref.get("screen_type");
+    final String screenSize = (String) clientPref.get("screen_size");
 
     return (jsonObject.get("acuity").toString().equalsIgnoreCase(acuity)
         && jsonObject.get("screen_type").toString().equalsIgnoreCase(screenType)
         && jsonObject.get("screen_size").toString().equalsIgnoreCase(screenSize));
   }
 
-  public static boolean hasSimilarMatch(JSONObject jsonObject, JSONObject jsonObject1) {
-    return Utility.checkPercentage(StringSimilarity.similarity(jsonObject.toString(), jsonObject1.toString()));
+  public static boolean hasSimilarMatch(JSONObject jsonObject1, JSONObject jsonObject) {
+    return Utility.checkPercentage(
+        StringSimilarity.similarity(jsonObject.toJSONString(), jsonObject1.toJSONString()));
   }
 
-  public static List<Device> check(List<Device> device,List<Device> device1){
-    if (device.isEmpty()) {
-      return device1;
+  public static List<Device> check(List<Device> exactDevice, List<Device> similarDevice) {
+    if (exactDevice.isEmpty()) {
+      return similarDevice;
     } else {
-      return device;
+      return exactDevice;
     }
   }
 
-  public static List<Device> addToList(JSONArray jsonArray, JSONObject jsonObject1){
+  public static List<Device> addToList(JSONArray jsonArray, JSONObject clientPref) {
+    final List<Device> exactdevices = new ArrayList<>();
+    final List<Device> similardevices = new ArrayList<>();
     for (int i = 0; i < jsonArray.size(); i++) {
       final JSONObject jsonObject = (JSONObject) jsonArray.get(i);
-      if(ProductUtil.hasExactMatch(jsonObject, jsonObject1)) {
-        exact_devices.add(DeviceMapper.createObject(jsonObject,StringSimilarity.similarity(jsonObject.toString(), jsonObject1.toString())));
-      }else if(ProductUtil.hasSimilarMatch(jsonObject, jsonObject1)){
-        similar_devices.add(DeviceMapper.createObject(jsonObject,StringSimilarity.similarity(jsonObject.toString(), jsonObject1.toString())));
+      if (ProductUtil.hasExactMatch(jsonObject, clientPref)) {
+        exactdevices.add(DeviceMapper.createObject(jsonObject,
+            StringSimilarity.similarity(clientPref.toJSONString(), jsonObject.toJSONString())));
+      } else if (ProductUtil.hasSimilarMatch(jsonObject, clientPref)) {
+        similardevices.add(DeviceMapper.createObject(jsonObject,
+            StringSimilarity.similarity(clientPref.toJSONString(), jsonObject.toJSONString())));
       }
     }
-    return ProductUtil.check(exact_devices,similar_devices) ;
+    return ProductUtil.check(exactdevices, similardevices);
   }
 
-  private ProductUtil() {}
 
 }
