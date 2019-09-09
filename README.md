@@ -10,8 +10,6 @@ We'll look at a ChatBot that will suggest a PMS (Patient Monetoring System). It 
 ### What is AIML
 Lets talk about AIML. AIML stands for Artificial Intelligence Markup Language. AIML was developed by the Alicebot free software community and Dr. Richard S. Wallace during 1995-2000. AIML is used to create or customize Alicebot which is a chat-box application based on A.L.I.C.E. (Artificial Linguistic Internet Computer Entity) free software.
 
-##CODE:
-
 <aiml version = "1.0.1" encoding = "UTF-8"?>
    <category>
       <pattern> HELLO ALICE </pattern>
