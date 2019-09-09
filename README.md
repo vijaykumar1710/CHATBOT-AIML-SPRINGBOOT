@@ -42,6 +42,10 @@ No major changes in the existing code are required. As We have tried to fulfill 
 ### During update : 
 Database should not be effected.(Should Follow previous tables schema). If Database is changing. Please change carefully all the effecting DAO classes. All new functionalities can be implemented without changing existing code.
 
+##Report of the CODE:
+
+--Images to be updated....
+
 
 ## Database
 - [SQL Database](https://www.mysql.com/)
