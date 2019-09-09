@@ -10,7 +10,12 @@ We'll look at a ChatBot that will suggest a PMS (Patient Monetoring System). It 
 ### What is AIML
 Lets talk about AIML. AIML stands for Artificial Intelligence Markup Language. AIML was developed by the Alicebot free software community and Dr. Richard S. Wallace during 1995-2000. AIML is used to create or customize Alicebot which is a chat-box application based on A.L.I.C.E. (Artificial Linguistic Internet Computer Entity) free software.
 
-<aiml version = "1.0.1" encoding = "UTF-8"?> <category> <pattern> HELLO ALICE </pattern><template>Hello User!</template</category</aiml>
+<aiml version = "1.0.1" encoding = "UTF-8"?> 
+    <category> 
+        <pattern> HELLO ALICE </pattern>
+        <template>Hello User!</template>
+    </category>
+ </aiml>
     
 ## Flow of control
 
@@ -40,6 +45,10 @@ Database should not be effected.(Should Follow previous tables schema). If Datab
 
 ## Database
 - [SQL Database](https://www.mysql.com/)
+
+create table client(username varchar(20),contact number(10),hospitaltype varchar(20));
+create table deviceinfo(username varchar(20),acuity varchar(20),screentype varchar(25),screensize varchar(25),addons varchar(200));
+
 
 Setting up Chatbot
 -----------------------------
