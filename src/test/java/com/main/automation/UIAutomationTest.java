@@ -1,7 +1,7 @@
 /*
  * The copyright of this file belongs to Koninklijke Philips N.V., 2019.
  */
-package com.main.uitest;
+package com.main.automation;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Before;
