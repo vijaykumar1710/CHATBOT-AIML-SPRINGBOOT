@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CustomerMapper.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chatbot Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">com.main.customer</a> &gt; <span class="el_source">CustomerMapper.java</span></div><h1>CustomerMapper.java</h1><pre class="source lang-java linenums">/*
+ * The copyright of this file belongs to Koninklijke Philips N.V., 2019.
+ */
+package com.main.customer;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import org.springframework.jdbc.core.RowMapper;
+
+<span class="nc" id="L10">public class CustomerMapper implements RowMapper&lt;Customer&gt; {</span>
+
+  @Override
+  public Customer mapRow(ResultSet rs, int rowNum) throws SQLException {
+<span class="nc" id="L14">    final Customer customerDetails = new Customer();</span>
+<span class="nc" id="L15">    customerDetails.setName(rs.getString(1));</span>
+<span class="nc" id="L16">    customerDetails.setContact(rs.getString(2));</span>
+<span class="nc" id="L17">    customerDetails.setHospitalType(rs.getString(3));</span>
+<span class="nc" id="L18">    customerDetails.setEmail(rs.getString(4));</span>
+<span class="nc" id="L19">    return customerDetails;</span>
+
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

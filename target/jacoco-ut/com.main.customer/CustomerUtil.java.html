@@ -7,14 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-<span class="nc" id="L10">public class CustomerUtil {</span>
+<span class="fc" id="L10">public class CustomerUtil {</span>
 
   @Autowired
   CustomerDAO customerDAO;
 
   public void addToDB(String username,String contact, String hospitaltype) {
-<span class="nc" id="L16">    final CustomerDetails customerDetails = new CustomerDetails(username,contact,hospitaltype);</span>
-<span class="nc" id="L17">    customerDAO.addCustomer(customerDetails);</span>
-<span class="nc" id="L18">  }</span>
+<span class="fc" id="L16">    final CustomerDetails customerDetails = new CustomerDetails(username,contact,hospitaltype);</span>
+<span class="fc" id="L17">    customerDAO.addCustomer(customerDetails);</span>
+<span class="fc" id="L18">  }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

@@ -12,8 +12,6 @@ public class Device {
   String basicfeatures;
   double percentage;
 
-
-
   @Override
   public String toString() {
     return "Device [productName=" + productName + ", acuity=" + acuity + ", screenType="
@@ -40,8 +38,6 @@ public class Device {
   public void setProductName(String productName) {
     this.productName = productName;
   }
-
-
 
   public Device() {
 
@@ -84,5 +80,6 @@ public class Device {
   public void setAddons(String addons) {
     this.addons = addons;
   }
+
 
 }

@@ -11,7 +11,7 @@ import com.main.customer.CustomerDAO;
 import com.main.device.DeviceDAO;
 
 @Component
-<span class="nc" id="L14">public class ResultUtil {</span>
+<span class="fc" id="L14">public class ResultUtil {</span>
 
   @Autowired
   DeviceDAO deviceDAO;
@@ -21,10 +21,10 @@ import com.main.device.DeviceDAO;
 
   public void deleteFromDB(String username,String msg) throws IOException {
 
-<span class="nc" id="L24">    final JSONObject jsonObject = deviceDAO.getDeviceInfo(username);</span>
-<span class="nc" id="L25">    deviceDAO.deleteDeviceRowSet(username);</span>
-<span class="nc" id="L26">    customerDAO.deleteCustomerRowSet(username);</span>
-<span class="nc" id="L27">    DetailsToSalesPeople.addDetailsToCSV(username,msg,jsonObject);</span>
-<span class="nc" id="L28">  }</span>
+<span class="fc" id="L24">    final JSONObject jsonObject = deviceDAO.getDeviceInfo(username);</span>
+<span class="fc" id="L25">    deviceDAO.deleteDeviceRowSet(username);</span>
+<span class="fc" id="L26">    customerDAO.deleteCustomerRowSet(username);</span>
+<span class="fc" id="L27">    DetailsToSalesPeople.addDetailsToCSV(username,msg,jsonObject);</span>
+<span class="fc" id="L28">  }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

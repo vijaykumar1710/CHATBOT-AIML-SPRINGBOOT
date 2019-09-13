@@ -4,25 +4,30 @@
 package com.main.result;
 
 import java.io.IOException;
+import java.util.List;
+import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import com.main.device.Device;
+import com.main.product.ProductPreferences;
+import com.main.product.ProductSuggestion;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 @Api(value = &quot;RESULT&quot;)
-@Controller
-<span class="nc" id="L16">public class ResultPageController {</span>
+@RestController
+<span class="nc" id="L21">public class ResultPageController {</span>
 
   @Autowired
-  ResultUtil resultUtil;
+  ProductPreferences productPreferences;
 
   @ApiOperation(value = &quot;Returns NEXT PAGE&quot;)
   @GetMapping(value = &quot;/result&quot;)
-  public String submitDetails(@RequestParam(&quot;username&quot;) String username, @RequestParam(&quot;msg&quot;) String comment) throws IOException{
-<span class="nc" id="L24">    resultUtil.deleteFromDB(username, comment);</span>
-<span class="nc" id="L25">    return &quot;user&quot;;</span>
+  public List&lt;Device&gt; submitDetails(@RequestParam(&quot;username&quot;) String username) throws IOException, ParseException{
+<span class="nc" id="L29">    return ProductSuggestion.compareProduct(productPreferences.getPreferences(username));</span>
   }
+
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

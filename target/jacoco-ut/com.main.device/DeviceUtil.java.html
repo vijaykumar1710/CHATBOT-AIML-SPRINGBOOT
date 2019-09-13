@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DeviceUtil.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chatbot Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">com.main.device</a> &gt; <span class="el_source">DeviceUtil.java</span></div><h1>DeviceUtil.java</h1><pre class="source lang-java linenums">/*
+ * The copyright of this file belongs to Koninklijke Philips N.V., 2019.
+ */
+package com.main.device;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+<span class="nc" id="L10">public class DeviceUtil {</span>
+
+  @Autowired
+  DeviceDAO deviceDAO;
+
+  public void util(String clientmsg,String username) {
+
+<span class="nc" id="L17">    clientmsg = clientmsg.toLowerCase();</span>
+<span class="nc" id="L18">    addAcuity(clientmsg, username);</span>
+<span class="nc" id="L19">    updateScreenType(clientmsg, username);</span>
+<span class="nc" id="L20">    updateScreenSize(clientmsg, username);</span>
+<span class="nc" id="L21">    updateAddons(clientmsg, username);</span>
+
+<span class="nc" id="L23">  }</span>
+
+  public void addAcuity(String clientmsg,String username) {
+<span class="nc bnc" id="L26" title="All 2 branches missed.">    if(clientmsg.contains(&quot;acuity&quot;)){</span>
+<span class="nc" id="L27">      deviceDAO.addDeviceAcuity(clientmsg, username);</span>
+    }
+<span class="nc" id="L29">  }</span>
+
+  public void updateScreenType(String clientmsg,String username) {
+<span class="nc bnc" id="L32" title="All 2 branches missed.">    if(clientmsg.contains(&quot;screen&quot;)){</span>
+<span class="nc" id="L33">      deviceDAO.addDeviceScreenType(clientmsg, username);</span>
+    }
+<span class="nc" id="L35">  }</span>
+
+  public void updateScreenSize(String clientmsg,String username) {
+<span class="nc bnc" id="L38" title="All 2 branches missed.">    if(clientmsg.contains(&quot;inch&quot;)){</span>
+<span class="nc" id="L39">      deviceDAO.addDeviceScreenSize(clientmsg, username);</span>
+    }
+
+<span class="nc" id="L42">  }</span>
+
+  public void updateAddons(String clientmsg,String username) {
+<span class="nc bnc" id="L45" title="All 2 branches missed.">    if(clientmsg.contains(&quot;addons&quot;)){</span>
+<span class="nc" id="L46">      deviceDAO.addDeviceAddons(clientmsg, username);</span>
+    }
+<span class="nc" id="L48">  }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

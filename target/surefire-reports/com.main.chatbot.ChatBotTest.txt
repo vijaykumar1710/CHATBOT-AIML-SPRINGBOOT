@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.main.chatbot.ChatBotTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.704 s - in com.main.chatbot.ChatBotTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.98 s - in com.main.chatbot.ChatBotTest

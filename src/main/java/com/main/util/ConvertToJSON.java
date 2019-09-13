@@ -3,7 +3,6 @@
  */
 package com.main.util;
 
-import java.util.HashMap;
 import org.json.simple.JSONObject;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 
@@ -12,7 +11,7 @@ public class ConvertToJSON {
   public static JSONObject convertToJSON(SqlRowSet requirement) {
 
 
-    final HashMap<String, Object> obj = new HashMap<>();
+    final JSONObject obj = new JSONObject();
 
     if(requirement.next()) {
       obj.put("acuity",requirement.getObject("ACUITY"));
@@ -22,7 +21,7 @@ public class ConvertToJSON {
       obj.put("add_ons",requirement.getObject("ADDONS"));
     }
 
-    return  new JSONObject(obj);
+    return obj;
 
   }
 

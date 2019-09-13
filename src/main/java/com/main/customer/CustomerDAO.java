@@ -3,9 +3,9 @@
  */
 package com.main.customer;
 
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -14,16 +14,16 @@ public class CustomerDAO {
   @Autowired
   JdbcTemplate jdbcTemplate;
 
-  public void addCustomer(CustomerDetails customerDetails) {
-    jdbcTemplate.update("insert into client values(?,?,?)",customerDetails.getName(),customerDetails.getContact(),customerDetails.getHospitalType());
+  public int addCustomer(Customer customerDetails) {
+    return jdbcTemplate.update("insert into client values(?,?,?,?)",customerDetails.getName(),customerDetails.getContact(),customerDetails.getHospitalType(),customerDetails.getEmail());
   }
 
-  public SqlRowSet getCustomer(String username) {
-    return jdbcTemplate.queryForRowSet("select * from client where username=?",username);
+  public Customer getCustomer(String email) {
+    return jdbcTemplate.queryForObject("select * from client where email=?",new CustomerMapper(),email);
   }
 
-  public void deleteCustomerRowSet(String username) {
-    jdbcTemplate.update("delete from client where username=?",username);
+  public List<Customer> getCustomers() {
+    return jdbcTemplate.query("select * from client",new CustomerMapper());
   }
 
 }

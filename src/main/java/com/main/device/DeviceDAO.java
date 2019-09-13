@@ -41,9 +41,4 @@ public class DeviceDAO {
     return jdbcTemplate.queryForRowSet("select * from deviceinfo where username=?",username);
   }
 
-  public void deleteDeviceRowSet(String username) {
-    jdbcTemplate.update("delete from deviceinfo where username=?",username);
-  }
-
-
 }

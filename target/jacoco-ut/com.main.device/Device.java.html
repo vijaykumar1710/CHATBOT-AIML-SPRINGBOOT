@@ -34,7 +34,7 @@ public class Device {
 <span class="fc" id="L34">  }</span>
 
   public String getProductName() {
-<span class="nc" id="L37">    return productName;</span>
+<span class="fc" id="L37">    return productName;</span>
   }
 
   public void setProductName(String productName) {
@@ -48,42 +48,55 @@ public class Device {
 <span class="fc" id="L48">  }</span>
 
   public double getPercentage() {
-<span class="nc" id="L51">    return percentage;</span>
+<span class="fc" id="L51">    return percentage;</span>
   }
   public void setPercentage(double percentage) {
 <span class="fc" id="L54">    this.percentage = percentage;</span>
 <span class="fc" id="L55">  }</span>
   public String getBasicfeatures() {
-<span class="nc" id="L57">    return basicfeatures;</span>
+<span class="fc" id="L57">    return basicfeatures;</span>
   }
   public void setBasicfeatures(String basicfeatures) {
 <span class="fc" id="L60">    this.basicfeatures = basicfeatures;</span>
 <span class="fc" id="L61">  }</span>
 
   public String getAcuity() {
-<span class="nc" id="L64">    return acuity;</span>
+<span class="fc" id="L64">    return acuity;</span>
   }
   public void setAcuity(String acuity) {
 <span class="fc" id="L67">    this.acuity = acuity;</span>
 <span class="fc" id="L68">  }</span>
   public String getScreenType() {
-<span class="nc" id="L70">    return screenType;</span>
+<span class="fc" id="L70">    return screenType;</span>
   }
   public void setScreenType(String screenType) {
 <span class="fc" id="L73">    this.screenType = screenType;</span>
 <span class="fc" id="L74">  }</span>
   public String getScreenSize() {
-<span class="nc" id="L76">    return screenSize;</span>
+<span class="fc" id="L76">    return screenSize;</span>
   }
   public void setScreenSize(String screenSize) {
 <span class="fc" id="L79">    this.screenSize = screenSize;</span>
 <span class="fc" id="L80">  }</span>
   public String getAddons() {
-<span class="nc" id="L82">    return addons;</span>
+<span class="fc" id="L82">    return addons;</span>
   }
   public void setAddons(String addons) {
 <span class="fc" id="L85">    this.addons = addons;</span>
 <span class="fc" id="L86">  }</span>
+
+  public Device(String productName, String acuity, String screenType, String screenSize,
+      String addons, String basicfeatures) {
+<span class="nc" id="L90">    super();</span>
+<span class="nc" id="L91">    this.productName = productName;</span>
+<span class="nc" id="L92">    this.acuity = acuity;</span>
+<span class="nc" id="L93">    this.screenType = screenType;</span>
+<span class="nc" id="L94">    this.screenSize = screenSize;</span>
+<span class="nc" id="L95">    this.addons = addons;</span>
+<span class="nc" id="L96">    this.basicfeatures = basicfeatures;</span>
+<span class="nc" id="L97">  }</span>
+
+
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

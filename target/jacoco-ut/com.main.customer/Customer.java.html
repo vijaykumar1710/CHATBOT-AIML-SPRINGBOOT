@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Customer.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chatbot Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">com.main.customer</a> &gt; <span class="el_source">Customer.java</span></div><h1>Customer.java</h1><pre class="source lang-java linenums">/*
+ * The copyright of this file belongs to Koninklijke Philips N.V., 2019.
+ */
+package com.main.customer;
+
+public class Customer {
+
+  String name;
+  String contact;
+  String hospitalType;
+  String email;
+
+  @Override
+  public String toString() {
+<span class="fc" id="L15">    return &quot;Customer [name=&quot; + name + &quot;, contact=&quot; + contact + &quot;, hospitalType=&quot; + hospitalType</span>
+        + &quot;, email=&quot; + email + &quot;]&quot;;
+  }
+  public String getName() {
+<span class="fc" id="L19">    return name;</span>
+  }
+  public void setName(String name) {
+<span class="fc" id="L22">    this.name = name;</span>
+<span class="fc" id="L23">  }</span>
+  public String getContact() {
+<span class="fc" id="L25">    return contact;</span>
+  }
+  public void setContact(String contact) {
+<span class="fc" id="L28">    this.contact = contact;</span>
+<span class="fc" id="L29">  }</span>
+  public String getHospitalType() {
+<span class="fc" id="L31">    return hospitalType;</span>
+  }
+  public void setHospitalType(String hospitalType) {
+<span class="fc" id="L34">    this.hospitalType = hospitalType;</span>
+<span class="fc" id="L35">  }</span>
+  public String getEmail() {
+<span class="fc" id="L37">    return email;</span>
+  }
+  public void setEmail(String email) {
+<span class="fc" id="L40">    this.email = email;</span>
+<span class="fc" id="L41">  }</span>
+  public Customer(String name, String contact, String hospitalType, String email) {
+<span class="fc" id="L43">    super();</span>
+<span class="fc" id="L44">    this.name = name;</span>
+<span class="fc" id="L45">    this.contact = contact;</span>
+<span class="fc" id="L46">    this.hospitalType = hospitalType;</span>
+<span class="fc" id="L47">    this.email = email;</span>
+<span class="fc" id="L48">  }</span>
+  public Customer() {
+<span class="fc" id="L50">    super();</span>
+<span class="fc" id="L51">  }</span>
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

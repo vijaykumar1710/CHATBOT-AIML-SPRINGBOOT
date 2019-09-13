@@ -14,7 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import com.main.device.DeviceController;
+import com.main.device.DeviceUtil;
 import com.main.product.ProductPreferences;
 import com.main.product.ProductSuggestion;
 import io.swagger.annotations.Api;
@@ -25,7 +25,7 @@ import io.swagger.annotations.ApiOperation;
 <span class="nc" id="L25">public class ChatbotController {</span>
 
   @Autowired
-  DeviceController deviceUtility;
+  DeviceUtil deviceUtility;
 
   @Autowired
   ProductPreferences productPreferences;

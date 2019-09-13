@@ -14,11 +14,9 @@ public class DetailsToSalesPeople {
   final static Logger logger =  Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
 
-  public static void addDetailsToCSV(String name,String commentmsg,JSONObject jsonObject) throws IOException {
+  public static void addDetailsToCSV(String name,JSONObject jsonObject) throws IOException {
     try(final FileWriter pw = new FileWriter("src/main/resources/data.csv",true)){
       pw.append(name);
-      pw.append(",");
-      pw.append(commentmsg);
       pw.append(",");
       pw.append(jsonObject.toJSONString());
       pw.append("\n");

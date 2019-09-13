@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AvailableProductsController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chatbot Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">com.main.availableproducts</a> &gt; <span class="el_source">AvailableProductsController.java</span></div><h1>AvailableProductsController.java</h1><pre class="source lang-java linenums">/*
+ * The copyright of this file belongs to Koninklijke Philips N.V., 2019.
+ */
+package com.main.availableproducts;
+
+import java.io.FileReader;
+import java.io.IOException;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import com.main.result.DetailsToSalesPeople;
+
+@RestController
+<span class="nc" id="L18">public class AvailableProductsController {</span>
+
+  private static final String PRODUCTS = &quot;src/main/resources/products.json&quot;;
+
+
+  @GetMapping(value=&quot;/products&quot;)
+  public JSONArray getAllProducts() throws IOException, ParseException{
+<span class="nc" id="L25">    final JSONParser parser = new JSONParser();</span>
+<span class="nc" id="L26">    final Object obj = parser.parse(new FileReader(PRODUCTS));</span>
+<span class="nc" id="L27">    return (JSONArray) obj;</span>
+  }
+
+  @GetMapping(value=&quot;/product&quot;)
+  public JSONObject takeProduct(@RequestParam(&quot;username&quot;) String username, @RequestParam(&quot;productName&quot;) String productName) throws IOException, ParseException{
+<span class="nc" id="L32">    final JSONParser parser = new JSONParser();</span>
+<span class="nc" id="L33">    final Object obj = parser.parse(new FileReader(PRODUCTS));</span>
+<span class="nc" id="L34">    final JSONArray jsonArray = (JSONArray) obj;</span>
+
+<span class="nc" id="L36">    JSONObject jsonObject = null;</span>
+
+<span class="nc bnc" id="L38" title="All 2 branches missed.">    for(int i=0;i&lt;jsonArray.size();i++) {</span>
+<span class="nc" id="L39">      jsonObject = (JSONObject) jsonArray.get(i);</span>
+<span class="nc bnc" id="L40" title="All 2 branches missed.">      if(jsonObject.get(&quot;name&quot;).toString().equalsIgnoreCase(productName)) {</span>
+<span class="nc" id="L41">        DetailsToSalesPeople.addDetailsToCSV(username,jsonObject);</span>
+<span class="nc" id="L42">        break;</span>
+      }
+    }
+
+<span class="nc" id="L46">    return jsonObject;</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

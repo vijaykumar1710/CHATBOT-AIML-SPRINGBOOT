@@ -12,15 +12,16 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import com.main.device.Device;
 
+
 public class ProductSuggestion {
 
   private static final String PRODUCTS = "src/main/resources/products.json";
 
-  public static List<Device> compareProduct(JSONObject jsonObject1) throws IOException, ParseException{
+  public static List<Device> compareProduct(JSONObject prefjsonObject1) throws IOException, ParseException{
     final JSONParser parser = new JSONParser();
     final Object obj = parser.parse(new FileReader(PRODUCTS));
     final JSONArray jsonArray = (JSONArray) obj;
-    return ProductUtil.addToList(jsonArray, jsonObject1);
+    return ProductUtil.addToList(jsonArray, prefjsonObject1);
   }
 
   private ProductSuggestion() {}

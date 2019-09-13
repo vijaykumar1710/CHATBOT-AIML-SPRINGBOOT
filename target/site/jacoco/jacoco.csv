@@ -13,8 +13,8 @@ chatbot Maven Webapp,com.main.util,ResourcePath,0,35,0,0,0,4,0,1,0,1
 chatbot Maven Webapp,com.main.util,StringSimilarity,0,36,0,4,0,9,0,3,0,1
 chatbot Maven Webapp,com.main.util,ConvertToJSON,0,45,1,1,0,8,1,1,0,1
 chatbot Maven Webapp,com.main.util,Utility,0,9,0,2,0,1,0,2,0,1
+chatbot Maven Webapp,com.main.device,DeviceUtil,63,0,8,0,19,0,10,0,6,0
 chatbot Maven Webapp,com.main.device,DeviceDAO,116,0,0,0,14,0,8,0,8,0
-chatbot Maven Webapp,com.main.device,DeviceController,46,0,8,0,11,0,6,0,2,0
 chatbot Maven Webapp,com.main.device,Device,21,97,0,0,7,26,7,10,7,10
 chatbot Maven Webapp,com.main.device,DeviceMapper,0,45,0,0,0,9,0,1,0,1
 chatbot Maven Webapp,com.main.customer,CustomerController,16,0,0,0,4,0,2,0,2,0
