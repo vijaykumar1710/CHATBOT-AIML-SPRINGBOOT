@@ -1,22 +1,23 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
 chatbot Maven Webapp,com.main.result,DetailsToSalesPeople,37,0,0,0,11,0,2,0,2,0
 chatbot Maven Webapp,com.main.result,ResultPageController,9,0,0,0,2,0,2,0,2,0
-chatbot Maven Webapp,com.main.availableproducts,AvailableProductsController,59,0,4,0,14,0,5,0,3,0
+chatbot Maven Webapp,com.main.availableproducts,AvailableProductsController,35,0,4,0,10,0,5,0,3,0
 chatbot Maven Webapp,com.main,AddAiml,6,12,0,0,3,4,2,1,2,1
 chatbot Maven Webapp,com.main,Application,8,0,0,0,3,0,2,0,2,0
-chatbot Maven Webapp,com.main.chatbot,ChatbotController,28,0,0,0,8,0,3,0,3,0
+chatbot Maven Webapp,com.main.chatbot,ChatbotController,24,0,0,0,7,0,2,0,2,0
 chatbot Maven Webapp,com.main.chatbot,ChatClass,36,0,0,0,16,0,8,0,8,0
 chatbot Maven Webapp,com.main.chatbot,ChatBot,0,32,0,2,0,10,0,3,0,2
 chatbot Maven Webapp,com.main.product,ProductPreferences,8,0,0,0,2,0,2,0,2,0
 chatbot Maven Webapp,com.main.product,ProductUtil,0,109,0,14,0,19,0,11,0,4
-chatbot Maven Webapp,com.main.product,ProductSuggestion,0,18,0,0,0,4,0,1,0,1
+chatbot Maven Webapp,com.main.product,ProductSuggestion,0,4,0,0,0,1,0,1,0,1
 chatbot Maven Webapp,com.main.util,ResourcePath,0,35,0,0,0,4,0,1,0,1
 chatbot Maven Webapp,com.main.util,StringSimilarity,0,36,0,4,0,9,0,3,0,1
+chatbot Maven Webapp,com.main.util,FetchProducts,0,14,0,0,0,3,0,1,0,1
 chatbot Maven Webapp,com.main.util,ConvertToJSON,0,42,1,1,0,8,1,1,0,1
 chatbot Maven Webapp,com.main.util,Utility,0,9,0,2,0,1,0,2,0,1
 chatbot Maven Webapp,com.main.device,DeviceUtil,63,0,8,0,19,0,10,0,6,0
 chatbot Maven Webapp,com.main.device,DeviceDAO,104,0,0,0,12,0,7,0,7,0
-chatbot Maven Webapp,com.main.device,Device,21,118,0,0,8,33,1,17,1,17
+chatbot Maven Webapp,com.main.device,Device,0,118,0,0,0,33,0,17,0,17
 chatbot Maven Webapp,com.main.device,DeviceMapper,0,45,0,0,0,9,0,1,0,1
 chatbot Maven Webapp,com.main.customer,CustomerController,27,0,0,0,6,0,4,0,4,0
 chatbot Maven Webapp,com.main.customer,CustomerMapper,29,0,0,0,7,0,2,0,2,0

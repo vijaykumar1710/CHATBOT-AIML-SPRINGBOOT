@@ -3,8 +3,6 @@
  */
 package com.main.chatbot;
 
-import java.sql.SQLException;
-import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,47 +13,22 @@ import io.swagger.annotations.ApiOperation;
 
 @Api(value = &quot;CHATBOT&quot;)
 @RestController
-<span class="nc" id="L18">public class ChatbotController {</span>
+<span class="nc" id="L16">public class ChatbotController {</span>
 
   @Autowired
   DeviceUtil deviceUtility;
 
-<span class="nc" id="L23">  private static Logger logger =  Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);</span>
-
   @ApiOperation(value = &quot;Returns PROPER REPLY OR NEXT PAGE&quot;)
   @GetMapping(value = &quot;/chat&quot;)
-  public ChatClass getBotReply(@RequestParam(&quot;message&quot;) String clientmsg, @RequestParam(&quot;username&quot;) String username) throws SQLException{
+  public ChatClass getBotReply(@RequestParam(&quot;message&quot;) String clientmsg, @RequestParam(&quot;username&quot;) String username){
 
-<span class="nc" id="L29">    final ChatClass chat = new ChatClass();</span>
-<span class="nc" id="L30">    chat.setUsername(username);</span>
-<span class="nc" id="L31">    chat.setClientmsg(clientmsg);</span>
-<span class="nc" id="L32">    chat.setBotReply(ChatBot.getBotReply(clientmsg));</span>
-<span class="nc" id="L33">    deviceUtility.util(clientmsg, username);</span>
+<span class="nc" id="L25">    final ChatClass chat = new ChatClass();</span>
+<span class="nc" id="L26">    chat.setUsername(username);</span>
+<span class="nc" id="L27">    chat.setClientmsg(clientmsg);</span>
+<span class="nc" id="L28">    chat.setBotReply(ChatBot.getBotReply(clientmsg));</span>
+<span class="nc" id="L29">    deviceUtility.util(clientmsg, username);</span>
 
-    //    }else if(clientmsg.contains(&quot;ok show the product&quot;)) {
-    //      try {
-    //        //
-    //        //        model.addAttribute(&quot;devices&quot;,ProductSuggestion.compareProduct(productPreferences.getPreferences(username)));
-    //        //        model.addAttribute(&quot;username&quot;,username);
-    //
-    //      } catch (final FileNotFoundException e) {
-    //        logger.log(Level.INFO,&quot;FileNotFoundException&quot;,e);
-    //      } catch (final IOException e) {
-    //        logger.log(Level.INFO,&quot;IOException&quot;,e);
-    //      } catch (final ParseException e) {
-    //        logger.log(Level.INFO,&quot;ParseException&quot;,e);
-    //      }
-    //      return &quot;result&quot;;
-    //    }
-    //    else {
-    //
-    //      deviceUtility.util(clientmsg, username);
-    //      model.addAttribute(&quot;respond&quot;,ChatBot.getBotReply(clientmsg));
-    //      model.addAttribute(&quot;received&quot;,clientmsg);
-    //      model.addAttribute(&quot;username&quot;,username);
-    //    }
-    //
-<span class="nc" id="L58">    return chat;</span>
+<span class="nc" id="L31">    return chat;</span>
   }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

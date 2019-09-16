@@ -10,18 +10,17 @@ import com.main.util.ResourcePath;
 
   static final String BOTNAME = &quot;super&quot;;
 
+  public static boolean updateAiml() {
+
+<span class="fc" id="L15">    final String resourcesPath = ResourcePath.getResourcesPath();</span>
+<span class="fc" id="L16">    final Bot bot = new Bot(BOTNAME, resourcesPath);</span>
+<span class="fc" id="L17">    bot.writeAIMLFiles();</span>
+<span class="fc" id="L18">    return true;</span>
+  }
+
   public static void main(String[] args) {
-    try {
-
-<span class="nc" id="L16">      final String resourcesPath = ResourcePath.getResourcesPath();</span>
-<span class="nc" id="L17">      final Bot bot = new Bot(BOTNAME, resourcesPath);</span>
-
-<span class="nc" id="L19">      bot.writeAIMLFiles();</span>
-
-<span class="nc" id="L21">    } catch (final Exception e) {</span>
-<span class="nc" id="L22">      e.printStackTrace();</span>
-<span class="nc" id="L23">    }</span>
-<span class="nc" id="L24">  }</span>
+<span class="nc" id="L22">    updateAiml();</span>
+<span class="nc" id="L23">  }</span>
 
 
 }

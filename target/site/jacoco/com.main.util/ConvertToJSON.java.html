@@ -3,7 +3,6 @@
  */
 package com.main.util;
 
-import java.util.HashMap;
 import org.json.simple.JSONObject;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 
@@ -12,17 +11,17 @@ public class ConvertToJSON {
   public static JSONObject convertToJSON(SqlRowSet requirement) {
 
 
-<span class="fc" id="L15">    final HashMap&lt;String, Object&gt; obj = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L14">    final JSONObject obj = new JSONObject();</span>
 
-<span class="pc bpc" id="L17" title="1 of 2 branches missed.">    if(requirement.next()) {</span>
-<span class="fc" id="L18">      obj.put(&quot;acuity&quot;,requirement.getObject(&quot;ACUITY&quot;));</span>
-<span class="fc" id="L19">      obj.put(&quot;screen_type&quot;,requirement.getObject(&quot;SCREENTYPE&quot;));</span>
-<span class="fc" id="L20">      obj.put(&quot;screen_size&quot;,requirement.getObject(&quot;SCREENSIZE&quot;));</span>
-<span class="fc" id="L21">      obj.put(&quot;basic_features&quot;,&quot; '3- and 5-lead ECG', 'Philips ST analysis', 'Impedance respiration', 'Philips NBP', 'Dual continuous temp'&quot;);</span>
-<span class="fc" id="L22">      obj.put(&quot;add_ons&quot;,requirement.getObject(&quot;ADDONS&quot;));</span>
+<span class="pc bpc" id="L16" title="1 of 2 branches missed.">    if(requirement.next()) {</span>
+<span class="fc" id="L17">      obj.put(&quot;acuity&quot;,requirement.getObject(&quot;ACUITY&quot;));</span>
+<span class="fc" id="L18">      obj.put(&quot;screen_type&quot;,requirement.getObject(&quot;SCREENTYPE&quot;));</span>
+<span class="fc" id="L19">      obj.put(&quot;screen_size&quot;,requirement.getObject(&quot;SCREENSIZE&quot;));</span>
+<span class="fc" id="L20">      obj.put(&quot;basic_features&quot;,&quot; '3- and 5-lead ECG', 'Philips ST analysis', 'Impedance respiration', 'Philips NBP', 'Dual continuous temp'&quot;);</span>
+<span class="fc" id="L21">      obj.put(&quot;add_ons&quot;,requirement.getObject(&quot;ADDONS&quot;));</span>
     }
 
-<span class="fc" id="L25">    return  new JSONObject(obj);</span>
+<span class="fc" id="L24">    return obj;</span>
 
   }
 

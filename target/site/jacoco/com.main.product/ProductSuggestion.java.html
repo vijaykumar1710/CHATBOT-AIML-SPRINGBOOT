@@ -3,24 +3,22 @@
  */
 package com.main.product;
 
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import com.main.device.Device;
+import com.main.util.FetchProducts;
+
 
 public class ProductSuggestion {
 
-  private static final String PRODUCTS = &quot;src/main/resources/products.json&quot;;
 
-  public static List&lt;Device&gt; compareProduct(JSONObject jsonObject1) throws IOException, ParseException{
-<span class="fc" id="L20">    final JSONParser parser = new JSONParser();</span>
-<span class="fc" id="L21">    final Object obj = parser.parse(new FileReader(PRODUCTS));</span>
-<span class="fc" id="L22">    final JSONArray jsonArray = (JSONArray) obj;</span>
-<span class="fc" id="L23">    return ProductUtil.addToList(jsonArray, jsonObject1);</span>
+
+  public static List&lt;Device&gt; compareProduct(JSONObject prefjsonObject1) throws IOException, ParseException{
+
+<span class="fc" id="L20">    return ProductUtil.addToList(FetchProducts.fetch(), prefjsonObject1);</span>
+
   }
 
   private ProductSuggestion() {}

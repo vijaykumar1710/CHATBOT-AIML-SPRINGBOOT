@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiOperation;
   @Autowired
   ProductPreferences productPreferences;
 
-  @ApiOperation(value = &quot;Returns NEXT PAGE&quot;)
+  @ApiOperation(value = &quot;product suggested by bot&quot;)
   @GetMapping(value = &quot;/result&quot;)
   public List&lt;Device&gt; submitDetails(@RequestParam(&quot;username&quot;) String username) throws IOException, ParseException{
 <span class="nc" id="L29">    return ProductSuggestion.compareProduct(productPreferences.getPreferences(username));</span>

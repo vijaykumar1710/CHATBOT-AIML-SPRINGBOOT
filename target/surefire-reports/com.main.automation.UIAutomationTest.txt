@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.main.automation.UIAutomationTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 46.935 s - in com.main.automation.UIAutomationTest

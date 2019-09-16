@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<category><pattern>WHAT IS MY WIFE NAME</pattern>
+<template>hhuuu</template>
+</category>
+<category><pattern>WHAT IS HHUUU</pattern>
+<template>Your wife name</template>
+</category>
+</aiml>

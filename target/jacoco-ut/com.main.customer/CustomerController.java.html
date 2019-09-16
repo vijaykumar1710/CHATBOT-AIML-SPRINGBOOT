@@ -20,7 +20,7 @@ import io.swagger.annotations.ApiOperation;
   @Autowired
   CustomerDAO customerDAO;
 
-  @ApiOperation(value = &quot;Returns NEXT PAGE&quot;)
+  @ApiOperation(value = &quot;adds customer to db&quot;)
   @PostMapping(value = &quot;/user/add&quot;)
   public Customer add(@RequestParam(&quot;username&quot;) String username, @RequestParam(&quot;contact&quot;) String contact,@RequestParam(&quot;hospital&quot;) String hospitaltype,@RequestParam(&quot;email&quot;) String email) {
 <span class="nc" id="L26">    final Customer customerDetails = new Customer(username,contact,hospitaltype,email);</span>
@@ -28,14 +28,16 @@ import io.swagger.annotations.ApiOperation;
 <span class="nc" id="L28">    return customerDetails;</span>
   }
 
+  @ApiOperation(value = &quot;get customer from db by email&quot;)
   @GetMapping(value = &quot;/user&quot;)
   public Customer getCustomerByEmail(@RequestParam(&quot;email&quot;) String email) {
-<span class="nc" id="L33">    return customerDAO.getCustomer(email);</span>
+<span class="nc" id="L34">    return customerDAO.getCustomer(email);</span>
   }
 
+  @ApiOperation(value = &quot;get all the customers&quot;)
   @GetMapping(value=&quot;/users&quot;)
   public List&lt;Customer&gt; getCustomers(){
-<span class="nc" id="L38">    return customerDAO.getCustomers();</span>
+<span class="nc" id="L40">    return customerDAO.getCustomers();</span>
   }
 
 }

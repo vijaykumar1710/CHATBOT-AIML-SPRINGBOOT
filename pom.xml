@@ -97,6 +97,14 @@
 			<scope>system</scope>
 			<systemPath>${basedir}/lib/ojdbc6.jar</systemPath>
 		</dependency>
+		
+		<dependency>
+			<groupId>com.alicebot</groupId>
+			<artifactId>ab</artifactId>
+			<version>4.3</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/ab.jar</systemPath>
+		</dependency>
 
 		<dependency>
 			<groupId>com.googlecode.json-simple</groupId>

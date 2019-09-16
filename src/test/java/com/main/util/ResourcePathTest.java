@@ -10,7 +10,7 @@ public class ResourcePathTest {
 
   @Test
   public void testGetResourcesPath() {
-    final String expected = "C:\\Users\\320050833\\Desktop\\SpringBooth\\chatbot\\src\\main\\resources";
+    final String expected = "C:\\Users\\320050833\\Desktop\\SpringBoot\\chatbot\\src\\main\\resources";
     final String actual = ResourcePath.getResourcesPath();
     assertEquals(expected, actual);
   }

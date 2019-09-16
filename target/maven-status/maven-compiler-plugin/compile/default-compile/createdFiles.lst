@@ -17,6 +17,7 @@ com\main\Application.class
 com\main\customer\CustomerMapper.class
 com\main\customer\CustomerController.class
 com\main\availableproducts\AvailableProductsController.class
+com\main\util\FetchProducts.class
 com\main\device\DeviceMapper.class
 com\main\util\StringSimilarity.class
 com\main\chatbot\ChatBot.class

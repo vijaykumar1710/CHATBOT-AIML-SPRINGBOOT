@@ -3,9 +3,9 @@
  */
 package com.main.customer;
 
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -14,17 +14,17 @@ import org.springframework.stereotype.Component;
   @Autowired
   JdbcTemplate jdbcTemplate;
 
-  public void addCustomer(CustomerDetails customerDetails) {
-<span class="nc" id="L18">    jdbcTemplate.update(&quot;insert into client values(?,?,?)&quot;,customerDetails.getName(),customerDetails.getContact(),customerDetails.getHospitalType());</span>
-<span class="nc" id="L19">  }</span>
-
-  public SqlRowSet getCustomer(String username) {
-<span class="nc" id="L22">    return jdbcTemplate.queryForRowSet(&quot;select * from client where username=?&quot;,username);</span>
+  public int addCustomer(Customer customerDetails) {
+<span class="nc" id="L18">    return jdbcTemplate.update(&quot;insert into client values(?,?,?,?)&quot;,customerDetails.getName(),customerDetails.getContact(),customerDetails.getHospitalType(),customerDetails.getEmail());</span>
   }
 
-  public void deleteCustomerRowSet(String username) {
-<span class="nc" id="L26">    jdbcTemplate.update(&quot;delete from client where username=?&quot;,username);</span>
-<span class="nc" id="L27">  }</span>
+  public Customer getCustomer(String email) {
+<span class="nc" id="L22">    return jdbcTemplate.queryForObject(&quot;select * from client where email=?&quot;,new CustomerMapper(),email);</span>
+  }
+
+  public List&lt;Customer&gt; getCustomers() {
+<span class="nc" id="L26">    return jdbcTemplate.query(&quot;select * from client&quot;,new CustomerMapper());</span>
+  }
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

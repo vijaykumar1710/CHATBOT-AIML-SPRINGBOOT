@@ -11,7 +11,7 @@ import org.json.simple.JSONObject;
 
 public class DetailsToSalesPeople {
 
-  final static Logger logger =  Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+  static final Logger logger =  Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
 
   public static void addDetailsToCSV(String name,JSONObject jsonObject) throws IOException {
