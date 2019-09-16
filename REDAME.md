@@ -22,15 +22,15 @@ AIML stands for Artificial Intelligence Markup Language. AIML was developed by t
 * 1. COLLECTING USER DETAILS
 * 2. CHATTING WITH BOT
 * 3. PRODUCT SUGGESTION
-* 4. DATA OF THE USER AND CHAT STORIN IN DATA.CSV FILE For the use of SALES SERVICES.
 
-In the project first we collect the user data and then user enters the ChatBot. ChatBot asks the product related questions and collects the answers from user. Where all the user preferences(JSONObject) for the product are compared to the existing products(JSONArray) and the most matching product is suggested. At the end depending on users interest of contacting the salesperson, SalesService interface is provided by storing the user data and user preferences in the data.csv and data from the DB Is deleted or retained.
+In the project first we collect the user data and then user enters the ChatBot. ChatBot asks the product related questions and collects the answers from user. Where all the user preferences(JSONObject) for the product are compared to the existing products(JSONArray) and the most matching product is suggested. At the end depending on users interest of contacting the salesperson, SalesService interface is provided by storing the user data and user preferences in the data.csv and data from the DB Is deleted or retained.(USER DETAILS CAN BE COLLECTED AT THE END TOO).
+
 
 ## Swagger Documentation
 * http://localhost:8085/swagger-ui.html#
 ## Standards SET for the project :
 
-* Code Coverage : 90% ( JUNIT test cases are run to proove)
+* Code Coverage : 77% ( JUNIT test cases are run to proove)
 * Size of a function : limited by SonarLint
 * Cyclomatic Complexity : 4
 * Duplication : 0 (Threshold = 3)
